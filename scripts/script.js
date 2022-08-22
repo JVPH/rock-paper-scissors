@@ -1,3 +1,11 @@
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(button.id);
+    });
+});
+
 function getComputerChoice(){
     const options = ['Rock', 'Paper', 'Scissors'];
     const compChoice = options[Math.floor(Math.random()*options.length)];
