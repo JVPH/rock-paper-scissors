@@ -13,11 +13,11 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection){
-    if(playerSelection.localeCompare(computerSelection.toString(), 'en', { sensitivity: 'base'}) === 0){
+    if(playerSelection === computerSelection.toLowerCase){
         return 'Draw';
-    }else if(playerSelection.localeCompare('Rock', 'en', { sensitivity: 'base'}) === 0 && computerSelection.localeCompare('Paper') === 0){
+    }else if(playerSelection === 'rock' && computerSelection.toLowerCase === 'paper'){
         return 'You Lose! Paper beats Rock';
-    }else if(playerSelection.localeCompare('Scissors', 'en', { sensitivity: 'base'}) === 0 && computerSelection.localeCompare('Rock') === 0){
+    }else if(playerSelection === 'scissors' && computerSelection.toLowerCase === 'rock'){
         return 'You Lose! Rock beats Scissors';
     }else {
         return `You Win! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase()} beats ${computerSelection}`;
