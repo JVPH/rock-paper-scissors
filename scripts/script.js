@@ -17,8 +17,8 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-    for (let i = 0; i < 5; i++){
-        const playerChoice = prompt('Type your pick: ');
-        alert(playRound(playerChoice, getComputerChoice()));       
-    }
+    // for (let i = 0; i < 5; i++){
+    //     const playerChoice = prompt('Type your pick: ');
+    //     alert(playRound(playerChoice, getComputerChoice()));       
+    // }
 }
