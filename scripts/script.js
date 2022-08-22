@@ -2,7 +2,7 @@ const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(button.id);
+        playRound(button.id, getComputerChoice());
     });
 });
 
@@ -19,11 +19,10 @@ function playRound(playerSelection, computerSelection){
         return 'You Lose! Paper beats Rock';
     }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
         return 'You Lose! Rock beats Scissors';
-    }else {
-        return `You Win! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase()} beats ${computerSelection}`;
+    }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
+        return 'You Lose! Scissors beats Paper';
+    }else {        
+        return `You Win! ${playerSelection.charAt(0).toUpperCase() 
+            + playerSelection.slice(1).toLowerCase()} beats ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1).toLowerCase()}`;
     }              
-}
-
-function game(){
-    
 }
