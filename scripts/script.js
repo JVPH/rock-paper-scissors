@@ -9,9 +9,9 @@ buttons.forEach((button) => {
 });
 
 const containerDiv = document.querySelector('#container');
-const playerScoreDiv = document.createElement('div');
-const computerScoreDiv = document.createElement('div');
-const resultDiv = document.createElement('div');
+const playerScoreDiv = document.createElement('p');
+const computerScoreDiv = document.createElement('p');
+const resultDiv = document.createElement('p');
 
 playerScoreDiv.classList.add('player-score');
 computerScoreDiv.classList.add('computer-score');
@@ -53,8 +53,10 @@ function updateScores(pScore, cScore){
         playerScoreDiv.textContent = `Player Score: ${playerScore}`;
         computerScoreDiv.textContent = `Computer Score: ${computerScore}`;
     }else {
-        playerScoreDiv.textContent = `Player Score: ${pScore}`;
-        computerScoreDiv.textContent = `Computer Score: ${cScore}`;
+        playerScore = pScore;
+        computerScore = cScore;
+        playerScoreDiv.textContent = `Player Score: ${playerScore}`;
+        computerScoreDiv.textContent = `Computer Score: ${computerScore}`;
     }    
 }
 
@@ -64,7 +66,6 @@ function game(playerChoice){
     if(computerScore === 5 || playerScore === 5){
         let winner = computerScore>playerScore ?  'Computer' : 'You';        
         resultDiv.textContent = `Game Over! ${winner} Won!`;
-        updateScores(0,0);
-        
+        updateScores(0,0);        
     }      
 }
