@@ -1,4 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+
 body{
     margin: 0;
     padding: 0;
+    height: 100vh;
+    font-family: 'DynaPuff', cursive;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+}
+
+.rock {
+
 }
