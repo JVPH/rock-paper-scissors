@@ -18,6 +18,7 @@ computerScoreDiv.classList.add('computer-score');
 
 updateScores();
 resultDiv.classList.add('result');
+resultDiv.textContent = 'Choice your pick to start playing!'
 
 containerDiv.appendChild(playerScoreDiv);
 containerDiv.appendChild(computerScoreDiv);
